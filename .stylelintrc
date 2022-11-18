@@ -6,6 +6,22 @@
     "stylelint-config-idiomatic-order",
     "stylelint-config-prettier-scss"
   ],
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "customSyntax": "postcss-scss",
+      "rules": {
+        "at-rule-no-unknown": null
+      }
+    },
+    {
+      "files": ["**/*.{js,ts}"],
+      "customSyntax": "@stylelint/postcss-css-in-js",
+      "rules": {
+        "at-rule-no-unknown": null
+      }
+    }
+  ],
   "rules": {
     "font-family-name-quotes": null,
     "plugin/stylelint-bem-namics": {

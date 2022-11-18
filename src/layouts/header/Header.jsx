@@ -1,9 +1,16 @@
+import styled from 'styled-components';
 import Logo from '../../common/Logo';
+
+const Section = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 100px;
+`;
 const Header = () => {
   return (
-    <div>
+    <Section>
       <Logo />
-    </div>
+    </Section>
   );
 }
 
