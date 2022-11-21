@@ -1,9 +1,13 @@
 import styled from 'styled-components';
+import variable from '../styles/variable';
 
 const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items:center;
+  h1 {
+    color: ${variable.blue_2} ;
+  }
 `;
 const Logo = () => {
   return (

@@ -5,12 +5,7 @@
     "es6": true,
     "node": true
   },
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "import",
-    "unused-imports"
-  ],
+  "plugins": ["react", "jsx-a11y", "import", "unused-imports"],
   "extends": [
     "plugin:import/recommended",
     "plugin:jest/recommended",
@@ -32,9 +27,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "src/**/*.{js,jsx}"
-      ],
+      "files": ["src/**/*.{js,jsx}"],
       "rules": {
         "import/order": [
           "error",
@@ -43,10 +36,7 @@
               "builtin",
               "external",
               "internal",
-              [
-                "parent",
-                "sibling"
-              ],
+              ["parent", "sibling"],
               "index",
               "object",
               "type"
@@ -58,9 +48,7 @@
                 "position": "after"
               }
             ],
-            "pathGroupsExcludedImportTypes": [
-              "builtin"
-            ],
+            "pathGroupsExcludedImportTypes": ["builtin"],
             "alphabetize": {
               "order": "asc",
               "caseInsensitive": true
@@ -74,15 +62,20 @@
   ],
   "rules": {
     "import/no-extraneous-dependencies": 0,
-    "import/extensions":0,
+    "import/extensions": 0,
     "jsx-a11y/click-events-have-key-events": "warn",
     "jsx-a11y/label-has-associated-control": "warn",
     "jsx-a11y/no-noninteractive-element-interactions": "warn",
-    "jsx-quotes": [
-      "error",
-      "prefer-double"
-    ],
+    "jsx-quotes": ["error", "prefer-double"],
     "no-unused-vars": "off",
+    "react/jsx-closing-bracket-location": "warn",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
     "react/function-component-definition": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": 0,
@@ -114,8 +107,7 @@
         }
       }
     ],
-    "sort-imports":
-    [
+    "sort-imports": [
       "error",
       {
         "ignoreCase": true,
