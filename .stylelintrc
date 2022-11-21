@@ -1,6 +1,7 @@
 {
   "plugins": ["stylelint-processor-styled-components","stylelint-scss", "stylelint-order"],
   "extends": [
+    "stylelint-config-styled-components",
     "stylelint-config-recommended",
     "stylelint-config-standard-scss",
     "stylelint-config-idiomatic-order",
