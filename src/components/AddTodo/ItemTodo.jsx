@@ -8,7 +8,7 @@ const Item = styled.div`
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 17px -6px rgba(0,0,0,0.2);
-  width: 80%;
+  width: 50%;
   p {
     font-size: 1rem;
   }
