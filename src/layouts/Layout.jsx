@@ -11,7 +11,7 @@ const BackgroundCover = styled.div`
   height: 100vh;
   background-image:  repeating-linear-gradient(0deg, #bdd6ff, #bdd6ff 1px, #e9f5f7 1px, #e9f5f7);
   background-size: 20px 20px;
-  opacity: 0.5;
+  opacity: 0.2;
   z-index: -999;
 `;
 const Layout = ({ children }) => {
