@@ -9,9 +9,7 @@ const BackgroundCover = styled.div`
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-image:  repeating-linear-gradient(0deg, #bdd6ff, #bdd6ff 1px, #e9f5f7 1px, #e9f5f7);
-  background-size: 20px 20px;
-  opacity: 0.2;
+  background-image: linear-gradient(to left top, #4fa095, #79b69d, #a3cca7, #cce1b5, #f6f6c9);
   z-index: -999;
 `;
 const Layout = ({ children }) => {
@@ -19,7 +17,7 @@ const Layout = ({ children }) => {
     <>
       <BackgroundCover />
       <Header></Header>
-      <Wrapper>
+      <Wrapper className='container'>
         {children}
       </Wrapper>
     </>
