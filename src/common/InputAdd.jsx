@@ -32,7 +32,7 @@ const InputAdd = ({ value, btnadd }) => {
       <form action="">
         <InputText type="text" name="" id="" value={value} placeholder="Agregar una tarea" />
         <Button onClick={btnadd}>
-          <i class='bx bx-plus'></i>
+          <i className='bx bx-plus'></i>
         </Button>
       </form>
     </>
