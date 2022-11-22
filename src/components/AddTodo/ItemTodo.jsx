@@ -10,8 +10,9 @@ const Item = styled.div`
   border-radius: 10px;
   border: 1px solid rgba(225, 225, 225, 0.2);
   margin-bottom: 20px;
-  box-shadow: 0px 0px 17px -6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.4);
   width: 50%;
+  margin: 0 auto 20px;
   &:nth-child(1n) {
     background-color: ${variable.item_1};
   }

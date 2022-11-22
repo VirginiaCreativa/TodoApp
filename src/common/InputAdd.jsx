@@ -6,37 +6,45 @@ const InputText = styled.input`
   border: none;
   border-radius: 4px;
   font-size: 1.1rem;
-  padding: 10px 20px;
+  padding: 12px 20px;
   width: 450px;
   margin-right: 10px;
 `;
 
 const Button = styled.button`
-    border-radius: 4px;
-    border: 0;
-    padding: 0px 12px;
-    background-color: ${variable.blue_1};
-    &:hover {
-      background-color: ${variable.blue_2};
-    }
-    i {
-      position: relative;
-      top: 2px;
-      color: #fff;
-      font-size: 24px;
-    }
+  position: relative;
+  top: 4px;
+  border-radius: 4px;
+  border: 0;
+  padding: 1px 12px;
+  background-color: ${variable.blue_1};
+  &:hover {
+    background-color: ${variable.blue_2};
+  }
+  i {
+    position: relative;
+    top: 2px;
+    color: #fff;
+    font-size: 24px;
+  }
 `;
 const InputAdd = ({ value, btnadd }) => {
   return (
     <>
       <form action="">
-        <InputText type="text" name="" id="" value={value} placeholder="Agregar una tarea" />
+        <InputText
+          type="text"
+          name=""
+          id=""
+          value={value}
+          placeholder="Agregar una tarea"
+        />
         <Button onClick={btnadd}>
-          <i className='bx bx-plus'></i>
+          <i className="bx bx-plus"></i>
         </Button>
       </form>
     </>
   );
-}
+};
 
 export default InputAdd;
