@@ -6,10 +6,17 @@ const Wrapper = styled.div`
 `;
 
 const BackgroundCover = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(to left top, #4fa095, #79b69d, #a3cca7, #cce1b5, #f6f6c9);
+  background-image: linear-gradient(
+    to left top,
+    #4fa095,
+    #79b69d,
+    #a3cca7,
+    #cce1b5,
+    #f6f6c9
+  );
   z-index: -999;
 `;
 const Layout = ({ children }) => {
@@ -17,11 +24,9 @@ const Layout = ({ children }) => {
     <>
       <BackgroundCover />
       <Header></Header>
-      <Wrapper className='container'>
-        {children}
-      </Wrapper>
+      <Wrapper className="container">{children}</Wrapper>
     </>
   );
-}
+};
 
 export default Layout;

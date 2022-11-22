@@ -10,6 +10,8 @@ const color = {
   grey_3: '#929AAB',
   grey_4: '#393E46',
   text: '#393E46',
+  item_1: '#344D67',
+  item_2: '#6ECCAF'
 };
 
 export default color;
