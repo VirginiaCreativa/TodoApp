@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+
+import Footer from './footer/Footer';
 import Header from './header/Header';
 
 const Wrapper = styled.div`
@@ -19,14 +21,13 @@ const BackgroundCover = styled.div`
   );
   z-index: -999;
 `;
-const Layout = ({ children }) => {
-  return (
-    <>
-      <BackgroundCover />
-      <Header></Header>
-      <Wrapper className="container">{children}</Wrapper>
-    </>
-  );
-};
+const Layout = ({ children }) => (
+  <>
+    <BackgroundCover />
+    <Header />
+    <Wrapper className="container">{children}</Wrapper>
+    <Footer />
+  </>
+);
 
 export default Layout;
