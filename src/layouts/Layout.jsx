@@ -4,7 +4,8 @@ import Footer from './footer/Footer';
 import Header from './header/Header';
 
 const Wrapper = styled.div`
-  height: 80vh;
+  min-height: 76vh;
+  margin-bottom: 60px;
 `;
 
 const BackgroundCover = styled.div`

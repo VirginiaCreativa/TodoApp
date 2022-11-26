@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ItemTodo from './ItemTodo';
 
 const newTodo = [
@@ -17,21 +18,14 @@ const newTodo = [
     done: false,
     descripcion: 'Clase FrontEnd',
   },
-  {
-    id: new Date().getTime(),
-    done: false,
-    descripcion: 'lavar ropa',
-  },
 ];
 
-const ListTodo = () => {
-  return (
-    <>
-      {newTodo.map((item, index) => (
-        <ItemTodo text={item.descripcion} key={index} />
-      ))}
-    </>
-  );
-};
+const ListTodo = () => (
+  <>
+    {newTodo.map((item, index) => (
+      <ItemTodo text={item.descripcion} key={item.id} />
+    ))}
+  </>
+);
 
 export default ListTodo;
