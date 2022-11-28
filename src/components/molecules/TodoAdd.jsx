@@ -17,7 +17,7 @@ const TodoAdd = ({ onNewTodo }) => {
       done: false,
       descripcion: description,
     };
-
+    ev.target
     return newTodo;
   };
 
