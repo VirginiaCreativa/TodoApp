@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Logo from '../../common/Logo';
+import Logo from '../../components/atoms/Logo';
 
 const Section = styled.div`
   display: flex;
@@ -12,6 +12,6 @@ const Header = () => {
       <Logo />
     </Section>
   );
-}
+};
 
 export default Header;

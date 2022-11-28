@@ -1,8 +1,9 @@
 import React from 'react';
 
-import ItemTodo from './ItemTodo';
+import TodoAdd from '../molecules/TodoAdd';
+import TodoItem from '../molecules/TodoItem';
 
-const newTodo = [
+const datas = [
   {
     id: new Date().getTime(),
     done: false,
@@ -20,12 +21,13 @@ const newTodo = [
   },
 ];
 
-const ListTodo = () => (
+const TodoApp = () => (
   <>
-    {newTodo.map((item, index) => (
-      <ItemTodo text={item.descripcion} key={item.id} />
+    <TodoAdd></TodoAdd>
+    {datas.map((item, index) => (
+      <TodoItem text={item.descripcion} key={index} />
     ))}
   </>
 );
 
-export default ListTodo;
+export default TodoApp;

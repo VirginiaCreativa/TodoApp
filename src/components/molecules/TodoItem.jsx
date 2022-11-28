@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import variable from '../../styles/variable';
+import Button from '../atoms/ButtonRemove';
 
 const Item = styled.div`
   display: flex;
@@ -11,7 +13,7 @@ const Item = styled.div`
   border: 1px solid rgba(225, 225, 225, 0.2);
   margin-bottom: 20px;
   box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.4);
-  width: 50%;
+  width: 60%;
   margin: 0 auto 20px;
   &:nth-child(1n) {
     background-color: ${variable.item_1};
@@ -20,36 +22,19 @@ const Item = styled.div`
     background-color: ${variable.item_2};
   }
   p {
+    display: flex;
+    align-items: center;
     font-size: 1rem;
     color: #fff;
     margin-bottom: 0;
-  }
-  button {
-    border: 1.5px solid #fff;
-    border-radius: 100%;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    margin: 0;
-    line-height: 0;
-    background-color: transparent;
-    i {
-      font-size: 14px;
-      color: #fff;
-    }
+    height: 32px;
   }
 `;
-const ItemTodo = ({ text }) => {
-  return (
-    <>
-      <Item>
-        <p>{text || 'No tiene'}</p>
-        <button>
-          <i className="bx bx-trash"></i>
-        </button>
-      </Item>
-    </>
-  );
-};
+const ItemTodo = ({ text }) => (
+  <Item>
+    <p>{text || 'No tiene'}</p>
+    <Button />
+  </Item>
+);
 
 export default ItemTodo;
