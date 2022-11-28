@@ -11,13 +11,14 @@ const TodoAdd = ({ onNewTodo }) => {
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    console.log(ev);
+
     const newTodo = {
       id: new Date().getTime(),
       done: false,
       descripcion: description,
     };
-    ev.target
+
+    ev.target[0].value = '';
     return newTodo;
   };
 
