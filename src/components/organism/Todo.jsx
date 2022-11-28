@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 
 import TodoAdd from '../molecules/TodoAdd';
@@ -23,7 +24,7 @@ const datas = [
 
 const TodoApp = () => (
   <>
-    <TodoAdd></TodoAdd>
+    <TodoAdd />
     {datas.map((item, index) => (
       <TodoItem text={item.descripcion} key={index} />
     ))}

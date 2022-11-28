@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import variable from '../../styles/variable';
 
 const Button = styled.button`
+  cursor: pointer;
+  position: relative;
+  top: 4px;
   border-radius: 4px;
   border: 0;
   padding: 1px 12px;
@@ -19,13 +22,7 @@ const Button = styled.button`
   }
 `;
 const ButtonAdd = ({ isValid, onClick, Ref, type }) => (
-  <Button
-    disableElevation
-    disabled={!isValid}
-    onClick={onClick}
-    ref={Ref}
-    type={type}
-  >
+  <Button onClick={onClick} ref={Ref} type={type}>
     <i className="bx bx-plus" />
   </Button>
 );
