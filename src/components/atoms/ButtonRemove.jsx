@@ -35,7 +35,7 @@ const ButtonRemove = ({ isValid, onClick, Ref, type }) => (
     ref={Ref}
     type={type}
   >
-    <i className="bx bx-trash-alt"></i>
+    <i className="bx bx-trash-alt" />
   </Button>
 );
 

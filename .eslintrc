@@ -63,6 +63,7 @@
     }
   ],
   "rules": {
+    "no-console": "off",
     "no-param-reassign": 0,
     "object-curly-newline": [
       "error",

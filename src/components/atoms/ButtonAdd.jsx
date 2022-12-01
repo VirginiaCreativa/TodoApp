@@ -5,8 +5,6 @@ import variable from '../../styles/variable';
 
 const Button = styled.button`
   cursor: pointer;
-  position: relative;
-  top: 4px;
   border-radius: 4px;
   border: 0;
   padding: 1px 12px;

@@ -6,12 +6,13 @@ const InputText = styled.input`
   border-radius: 4px;
   font-size: 1.1rem;
   padding: 12px 20px;
-  width: 450px;
+  width: 55%;
   margin-right: 10px;
 `;
 
-const InputAdd = ({ type, name, value, placeholder, onChange }) => (
+const InputAdd = ({ type, name, value, placeholder, onChange, register }) => (
   <InputText
+    register={register}
     type={type}
     name={name}
     value={value}
