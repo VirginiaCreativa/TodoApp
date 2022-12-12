@@ -1,9 +1,12 @@
+import moment from 'moment';
+import 'moment/locale/es';
 import React from 'react';
-import Moment from 'react-moment';
+
+moment.locale('es');
 
 const Time = () => {
-  const dateToFormat = '1976-04-19T12:59-0500';
-  return <Moment format="YYYY/MM/DD" date={dateToFormat} />;
+  const dateToFormat = moment('2012 July', 'YYYY MMM', 'es');
+  return <p>{dateToFormat}</p>;
 };
 
 export default Time;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import variable from '../../styles/variable';
 import Button from '../atoms/ButtonRemove';
+import Time from '../atoms/Time';
 
 const Item = styled.div`
   display: flex;
@@ -34,10 +35,11 @@ const ItemTodo = ({ text }) => (
   <Item>
     <div className="container">
       <div className="row">
-        <div className="col-10">
+        <div className="col-11">
           <p>{text || 'No tiene'}</p>
+          <Time />
         </div>
-        <div className="col-2">
+        <div className="col-1">
           <Button />
         </div>
       </div>
