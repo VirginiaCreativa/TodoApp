@@ -1,12 +1,25 @@
 import moment from 'moment';
-import 'moment/locale/es';
+import 'moment/dist/locale/es';
 import React from 'react';
+import styled from 'styled-components';
 
 moment.locale('es');
 
+const BoxTime = styled.div`
+  p {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+    height: 0;
+  }
+`;
+
 const Time = () => {
-  const dateToFormat = moment('2012 July', 'YYYY MMM', 'es');
-  return <p>{dateToFormat}</p>;
+  const date = moment().format('LL');
+  return (
+    <BoxTime>
+      <p>{date}</p>
+    </BoxTime>
+  );
 };
 
 export default Time;

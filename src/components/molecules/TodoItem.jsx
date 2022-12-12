@@ -36,8 +36,8 @@ const ItemTodo = ({ text }) => (
     <div className="container">
       <div className="row">
         <div className="col-11">
-          <p>{text || 'No tiene'}</p>
           <Time />
+          <p>{text || 'No tiene'}</p>
         </div>
         <div className="col-1">
           <Button />
