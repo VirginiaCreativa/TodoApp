@@ -32,8 +32,16 @@ const Item = styled.div`
 `;
 const ItemTodo = ({ text }) => (
   <Item>
-    <p>{text || 'No tiene'}</p>
-    <Button />
+    <div className="container">
+      <div className="row">
+        <div className="col-10">
+          <p>{text || 'No tiene'}</p>
+        </div>
+        <div className="col-2">
+          <Button />
+        </div>
+      </div>
+    </div>
   </Item>
 );
 
