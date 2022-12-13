@@ -6,6 +6,7 @@ const BoxFooter = styled.footer`
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+    color: #fff;
   }
 `;
 const Footer = () => (

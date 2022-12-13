@@ -8,7 +8,7 @@ const Button = styled.button`
   border-radius: 4px;
   border: 0;
   padding: 1px 12px;
-  background-color: ${variable.blue_1};
+  background-color: ${variable.organe};
   &:hover {
     background-color: ${variable.blue_2};
   }
