@@ -15,7 +15,7 @@ const Button = styled.button`
     top: -2px;
     line-height: 0;
     padding: 0;
-    color: #fff;
+    color: ${variable.grey_3};
     font-size: ${({ size }) => size};
     &:hover {
       color: ${variable.blue_1};

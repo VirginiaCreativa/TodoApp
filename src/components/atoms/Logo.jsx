@@ -7,9 +7,9 @@ const Section = styled.div`
   justify-content: center;
   align-items: center;
   h1 {
-    color: ${variable.white};
+    color: ${variable.blue_1};
     font-weight: 300;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 0px #fff;
     span {
       font-weight: 900;
     }

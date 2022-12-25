@@ -6,38 +6,45 @@ import TextItem from '../atoms/TextItem';
 import Time from '../atoms/Time';
 
 const Item = styled.div`
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 20px;
   justify-content: center;
   align-items: top;
   border-radius: 12px;
-  box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px 0px rgba(223, 232, 237, 0.5);
+  background-color: #fff;
   width: 600px;
   margin-bottom: 20px;
-  padding: 10px 20px;
-  &:nth-child(1n) {
-    background-color: ${variable.item_3};
-  }
-  &:nth-child(2n) {
-    background-color: ${variable.item_6};
-  }
-
+  padding: 20px;
   p {
-    display: flex;
-    align-items: center;
     font-size: 1rem;
-    color: #fff;
-    margin-bottom: 0;
-    height: 32px;
+    font-weight: 600;
+    color: ${variable.text};
+  }
+  .todo {
+    width: calc(10px + 600px - 40px);
+  }
+  .remove {
+    position: absolute;
+    right: 10px;
   }
 `;
+const Line = styled.div`
+  display: block;
+  width: 100%;
+  border: 0.2px dashed ${variable.grey_3};
+  margin: 10px 0;
+  opacity: 0.3;
+`;
+
 const ItemTodo = ({ text }) => (
   <Item>
-    <div className="col">
+    <div className="todo">
       <TextItem text={text || 'No tiene'} />
+      <Line />
       <Time />
     </div>
-    <div className="col">
+    <div className="remove">
       <BtnIcon bxicon="bx-trash-alt" size="14px" />
     </div>
   </Item>
