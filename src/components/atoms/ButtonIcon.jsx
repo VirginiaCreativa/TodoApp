@@ -1,42 +1,39 @@
-import React from 'react';
 import styled from 'styled-components';
 
 import variable from '../../styles/variable';
 
 const Button = styled.button`
+  border: none;
   cursor: pointer;
   border-radius: 4px;
-  border: 1.5px solid #fff;
   width: 30px;
   height: 30px;
-  border-radius: 100%;
   background-color: transparent;
   line-height: 0;
-  &:hover {
-    border: 1.5px solid ${variable.red};
-  }
   i {
     position: relative;
     top: -2px;
     line-height: 0;
     padding: 0;
     color: #fff;
-    font-size: 16px;
+    font-size: ${({ size }) => size};
     &:hover {
-      color: ${variable.red};
+      color: ${variable.blue_1};
     }
   }
 `;
-const ButtonRemove = ({ isValid, onClick, Ref, type }) => (
+
+const ButtonIcon = ({ isValid, onClick, Ref, type, bxicon, size }) => (
   <Button
     disableElevation
     disabled={!isValid}
     onClick={onClick}
     ref={Ref}
     type={type}
+    size={size}
   >
-    <i className="bx bx-trash-alt" />
+    <i className={`bx ${bxicon}`} />
   </Button>
 );
 
-export default ButtonRemove;
+export default ButtonIcon;

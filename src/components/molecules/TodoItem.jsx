@@ -1,26 +1,25 @@
 import styled from 'styled-components';
 
 import variable from '../../styles/variable';
-import Button from '../atoms/ButtonRemove';
+import BtnIcon from '../atoms/ButtonIcon';
 import TextItem from '../atoms/TextItem';
 import Time from '../atoms/Time';
 
 const Item = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-radius: 18px;
-  border: 1px solid rgba(225, 225, 225, 0.2);
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  justify-content: center;
+  align-items: top;
+  border-radius: 12px;
   box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.4);
-  width: 60%;
-  margin: 0 auto 20px;
+  width: 600px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
   &:nth-child(1n) {
-    background-color: ${variable.item_5};
+    background-color: ${variable.item_3};
   }
   &:nth-child(2n) {
-    background-color: ${variable.item_1};
+    background-color: ${variable.item_6};
   }
 
   p {
@@ -34,16 +33,12 @@ const Item = styled.div`
 `;
 const ItemTodo = ({ text }) => (
   <Item>
-    <div className="container">
-      <div className="row">
-        <div className="col-11">
-          <Time />
-          <TextItem text={text || 'No tiene'} />
-        </div>
-        <div className="col-1">
-          <Button />
-        </div>
-      </div>
+    <div className="col">
+      <TextItem text={text || 'No tiene'} />
+      <Time />
+    </div>
+    <div className="col">
+      <BtnIcon bxicon="bx-trash-alt" size="14px" />
     </div>
   </Item>
 );

@@ -7,7 +7,6 @@ import InputAdd from '../atoms/InputAdd';
 const Form = styled.form`
   display: flex;
   justify-content: center;
-  width: 100%;
 `;
 const TodoAdd = ({ onNewTodo }) => {
   const { description, handleSubmit, watch } = useForm();
@@ -28,12 +27,10 @@ const TodoAdd = ({ onNewTodo }) => {
   console.log(watch());
 
   return (
-    <div className="d-flex justify-content-center mb-5">
-      <Form name="formulario">
-        <InputAdd register={description} type="text" name="addTodo" />
-        <ButtonAdd type="submit" />
-      </Form>
-    </div>
+    <Form name="formulario">
+      <InputAdd register={description} type="text" name="addTodo" />
+      <ButtonAdd type="submit" />
+    </Form>
   );
 };
 
