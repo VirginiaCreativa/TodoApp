@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import styled from 'styled-components';
 
 import texts from '../../config/text.json';
@@ -13,8 +14,8 @@ const BoxSelections = styled.div`
 `;
 const TodoSelections = () => (
   <BoxSelections>
-    {Object.keys(Selections).map((item) => (
-      <Tag text={Selections[item]} />
+    {Object.keys(Selections).map((item, index) => (
+      <Tag key={index} text={Selections[item]} />
     ))}
   </BoxSelections>
 );
