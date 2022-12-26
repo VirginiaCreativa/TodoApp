@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import texts from '../../config/text.json';
 import Tag from '../atoms/Tag';
-import { casa } from './tags_colors';
+import tagsColors from './tags_colors';
 
 const Selections = texts.selections;
 
@@ -14,18 +14,15 @@ const BoxSelections = styled.div`
   padding: 40px 0;
 `;
 
-console.log(casa);
-const TodoSelections = () => (
-  <BoxSelections>
-    {Object.keys(Selections).map((item, index) => (
-      <Tag
-        key={index}
-        text={Selections[item]}
-        bg={casa.background}
-        color={casa.color}
-      />
-    ))}
-  </BoxSelections>
-);
+const TodoSelections = () => {
+  console.log(tagsColors);
+  return (
+    <BoxSelections>
+      {Object.keys(Selections).map((item, index) => (
+        <Tag key={index} text={Selections[item]} />
+      ))}
+    </BoxSelections>
+  );
+};
 
 export default TodoSelections;
