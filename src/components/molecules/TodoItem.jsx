@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import variable from '../../styles/variable';
 import BtnIcon from '../atoms/ButtonIcon';
+import Tag from '../atoms/Tag';
 import TextItem from '../atoms/TextItem';
 import Time from '../atoms/Time';
 
@@ -37,10 +38,11 @@ const Line = styled.div`
   opacity: 0.3;
 `;
 
-const ItemTodo = ({ text }) => (
+const ItemTodo = ({ text, tag }) => (
   <Item>
     <div className="todo">
       <TextItem text={text || 'No tiene'} />
+      <Tag tag={tag} />
       <Line />
       <Time />
     </div>

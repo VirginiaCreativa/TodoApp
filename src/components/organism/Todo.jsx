@@ -21,46 +21,19 @@ const datas = [
     id: new Date().getTime(),
     done: false,
     descripcion: 'Comprar gaseosa manzana',
+    tag: 'comprar',
   },
   {
     id: new Date().getTime(),
     done: false,
     descripcion: 'Clase Ingles',
+    tag: 'casa',
   },
   {
     id: new Date().getTime(),
     done: false,
     descripcion: 'Clase FrontEnd',
-  },
-  {
-    id: new Date().getTime(),
-    done: false,
-    descripcion: 'Comprar gaseosa manzana',
-  },
-  {
-    id: new Date().getTime(),
-    done: false,
-    descripcion: 'Clase Ingles',
-  },
-  {
-    id: new Date().getTime(),
-    done: false,
-    descripcion: 'Clase FrontEnd',
-  },
-  {
-    id: new Date().getTime(),
-    done: false,
-    descripcion: 'Comprar gaseosa manzana',
-  },
-  {
-    id: new Date().getTime(),
-    done: false,
-    descripcion: 'Clase Ingles',
-  },
-  {
-    id: new Date().getTime(),
-    done: false,
-    descripcion: 'Clase FrontEnd',
+    tag: 'pago',
   },
 ];
 
@@ -71,7 +44,7 @@ const TodoApp = () => (
     </BoxAdd>
     <BoxTodos>
       {datas.map((item, index) => (
-        <TodoItem text={item.descripcion} key={index} />
+        <TodoItem text={item.descripcion} key={index} tag={item.tag} />
       ))}
     </BoxTodos>
   </>
