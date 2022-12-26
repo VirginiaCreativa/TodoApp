@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import TodoAdd from '../molecules/TodoAdd';
 import TodoItem from '../molecules/TodoItem';
+import TodoSelections from '../molecules/TodoSelections';
 
 const BoxAdd = styled.div`
   margin-bottom: 60px;
@@ -41,6 +42,7 @@ const TodoApp = () => (
   <>
     <BoxAdd>
       <TodoAdd />
+      <TodoSelections />
     </BoxAdd>
     <BoxTodos>
       {datas.map((item, index) => (

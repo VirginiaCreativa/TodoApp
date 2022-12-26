@@ -1,0 +1,11 @@
+{
+  "appName": "todoApp",
+  "by": "@Virginia.Creativa",
+  "selections": {
+    "tagCasa": "Casa",
+    "tagComprar": "Comprar",
+    "tagCitar": "Citar",
+    "tagPago": "Pago",
+    "tagMercado": "Mercados"
+  }
+}
