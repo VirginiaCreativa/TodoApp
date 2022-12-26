@@ -6,9 +6,9 @@ const BoxTag = styled.div`
   color: ${({ color }) => color}; ;
 `;
 
-const Tag = ({ tag, bg, color }) => (
+const Tag = ({ text, bg, color }) => (
   <BoxTag bg={bg} color={color}>
-    <p>{tag}</p>
+    <p>{text}</p>
   </BoxTag>
 );
 

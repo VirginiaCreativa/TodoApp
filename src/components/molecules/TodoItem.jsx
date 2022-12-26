@@ -42,7 +42,7 @@ const ItemTodo = ({ text, tag }) => (
   <Item>
     <div className="todo">
       <TextItem text={text || 'No tiene'} />
-      <Tag tag={tag} />
+      <Tag text={tag} />
       <Line />
       <Time />
     </div>
