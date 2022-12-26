@@ -3,20 +3,20 @@ import styled from 'styled-components';
 import variable from '../../styles/variable';
 
 const Button = styled.button`
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  width: 30px;
-  height: 30px;
   background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 30px;
   line-height: 0;
+  width: 30px;
   i {
-    position: relative;
-    top: -2px;
-    line-height: 0;
-    padding: 0;
     color: ${variable.grey_3};
     font-size: ${({ size }) => size};
+    line-height: 0;
+    padding: 0;
+    position: relative;
+    top: -2px;
     &:hover {
       color: ${variable.blue_1};
     }

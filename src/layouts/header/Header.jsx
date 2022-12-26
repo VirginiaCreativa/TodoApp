@@ -4,8 +4,8 @@ import Logo from '../../components/atoms/Logo';
 
 const Section = styled.div`
   display: flex;
-  justify-content: center;
   height: 130px;
+  justify-content: center;
 `;
 const Header = () => (
   <Section>

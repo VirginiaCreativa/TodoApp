@@ -2,8 +2,11 @@ import styled from 'styled-components';
 
 const BoxTag = styled.div`
   background-color: ${({ bg }) => bg};
+  color: ${({ color }) => color};
   font-size: 0.8rem;
-  color: ${({ color }) => color}; ;
+  p {
+    margin-bottom: 0;
+  }
 `;
 
 const Tag = ({ text, bg, color }) => (

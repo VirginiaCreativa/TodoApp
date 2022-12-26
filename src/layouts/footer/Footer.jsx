@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 const BoxFooter = styled.footer`
   p {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1rem;
     color: #fff;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
   }
 `;
 const Footer = () => (

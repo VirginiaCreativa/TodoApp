@@ -5,9 +5,9 @@ const InputText = styled.input`
   border: none;
   border-radius: 4px;
   font-size: 1.1rem;
+  margin-right: 10px;
   padding: 12px 20px;
   width: 40%;
-  margin-right: 10px;
 `;
 
 const InputAdd = ({ type, name, value, placeholder, onChange, register }) => (
