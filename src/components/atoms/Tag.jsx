@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import capitalizeFirstLetter from '../../config/capitalizeFirstLetter';
+
 const BoxTag = styled.button`
   background-color: ${({ bg }) => bg};
   border: none;
@@ -12,6 +14,8 @@ const BoxTag = styled.button`
     color: ${({ colorhover }) => colorhover};
   }
   p {
+    color: ${({ color }) => color};
+    font-size: 0.8rem;
     font-weight: 600;
     margin-bottom: 0;
   }
@@ -19,7 +23,7 @@ const BoxTag = styled.button`
 
 const Tag = ({ text, bg, color, bghover, colorhover }) => (
   <BoxTag bg={bg} color={color} bghover={bghover} colorhover={colorhover}>
-    <p>{text}</p>
+    <p>{capitalizeFirstLetter(text)}</p>
   </BoxTag>
 );
 

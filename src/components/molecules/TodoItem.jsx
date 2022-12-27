@@ -5,6 +5,7 @@ import BtnIcon from '../atoms/ButtonIcon';
 import Tag from '../atoms/Tag';
 import TextItem from '../atoms/TextItem';
 import Time from '../atoms/Time';
+import tagsDatas from './tags_datas';
 
 const Item = styled.div`
   align-items: top;
@@ -38,18 +39,27 @@ const Line = styled.div`
   width: 100%;
 `;
 
-const ItemTodo = ({ text, tag }) => (
-  <Item>
-    <div className="todo">
-      <TextItem text={text || 'No tiene'} />
-      <Tag text={tag} />
-      <Line />
-      <Time />
-    </div>
-    <div className="remove">
-      <BtnIcon bxicon="bx-trash-alt" size="14px" />
-    </div>
-  </Item>
-);
+const ItemTodo = ({ text, tag }) => {
+  console.log(tag);
+
+  return (
+    <Item>
+      <div className="todo">
+        <TextItem text={text || 'No tiene'} />
+        {tagsDatas
+          .filter((el) => el.name.includes(tag))
+          .map((item) => (
+            <Tag text={tag} bg={item.background} color={item.color} />
+          ))}
+
+        <Line />
+        <Time />
+      </div>
+      <div className="remove">
+        <BtnIcon bxicon="bx-trash-alt" size="14px" />
+      </div>
+    </Item>
+  );
+};
 
 export default ItemTodo;

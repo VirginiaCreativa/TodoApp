@@ -7,7 +7,7 @@ const tagsDatas = [
     color: variable.tag_col_1,
   },
   {
-    name: 'comp',
+    name: 'comprar',
     background: variable.tag_bg_2,
     color: variable.tag_col_2,
   },
