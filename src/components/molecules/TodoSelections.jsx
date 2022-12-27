@@ -25,6 +25,8 @@ const TodoSelections = () => {
           text={capitalizeFirstLetter(item.name)}
           bg={item.background}
           color={item.color}
+          bghover={item.color}
+          colorhover={item.background}
         />
       ))}
     </BoxSelections>
