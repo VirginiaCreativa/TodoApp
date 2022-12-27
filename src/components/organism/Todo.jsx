@@ -11,10 +11,10 @@ const BoxAdd = styled.div`
 `;
 
 const BoxTodos = styled.div`
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 const datas = [

@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  min-height: 76vh;
   margin-bottom: 60px;
+  min-height: 76vh;
 `;
 
 const Layout = ({ children }) => (

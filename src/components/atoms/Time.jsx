@@ -8,9 +8,9 @@ import variable from '../../styles/variable';
 moment.locale('es');
 
 const BoxTime = styled.p`
-  font-weight: 400 !important;
   color: ${variable.grey_3} !important;
   font-size: 0.7rem !important;
+  font-weight: 400 !important;
   margin-bottom: 0;
 `;
 

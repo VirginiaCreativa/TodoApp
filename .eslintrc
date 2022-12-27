@@ -5,7 +5,14 @@
     "es6": true,
     "node": true
   },
-  "plugins": ["react", "jsx-a11y", "import", "unused-imports"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "import",
+    "unused-imports",
+    "better-styled-components"
+  ],
   "extends": [
     "plugin:import/recommended",
     "plugin:jest/recommended",
@@ -27,56 +34,15 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "overrides": [
-    {
-      "files": ["src/**/*.{js,jsx}"],
-      "rules": {
-        "import/order": [
-          "error",
-          {
-            "groups": [
-              "builtin",
-              "external",
-              "internal",
-              ["parent", "sibling"],
-              "index",
-              "object",
-              "type"
-            ],
-            "pathGroups": [
-              {
-                "pattern": "./**/**\\.css",
-                "group": "type",
-                "position": "after"
-              }
-            ],
-            "pathGroupsExcludedImportTypes": ["builtin"],
-            "alphabetize": {
-              "order": "asc",
-              "caseInsensitive": true
-            },
-            "newlines-between": "always",
-            "warnOnUnassignedImports": true
-          }
-        ]
-      }
-    }
-  ],
   "rules": {
+    "react-hooks/exhaustive-deps": "warn",
+    "better-styled-components/sort-declarations-alphabetically": 2,
     "react/no-unknown-property": 0,
     "no-undef": "off",
     "comma-dangle": "off",
     "no-console": "off",
     "no-param-reassign": 0,
-    "object-curly-newline": [
-      "error",
-      {
-        "ObjectExpression": "always",
-        "ObjectPattern": { "multiline": true },
-        "ImportDeclaration": "never",
-        "ExportDeclaration": { "multiline": true, "minProperties": 3 }
-      }
-    ],
+    "object-curly-newline": "off",
     "import/no-extraneous-dependencies": 0,
     "import/extensions": 0,
     "jsx-a11y/click-events-have-key-events": "warn",

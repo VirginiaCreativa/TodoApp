@@ -1,22 +1,36 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import texts from '../../config/text.json';
+import capitalizeFirstLetter from '../../config/capitalizeFirstLetter';
 import Tag from '../atoms/Tag';
-
-const Selections = texts.selections;
+import tagsDatas from './tags_datas';
 
 const BoxSelections = styled.div`
   display: flex;
-  justify-content: center;
   gap: 10px;
+  justify-content: center;
   padding: 40px 0;
 `;
-const TodoSelections = () => (
-  <BoxSelections>
-    {Object.keys(Selections).map((item) => (
-      <Tag text={Selections[item]} />
-    ))}
-  </BoxSelections>
-);
+
+const TodoSelections = () => {
+  const [isTag, setIsTag] = useState([]);
+
+  console.log(tagsDatas);
+
+  return (
+    <BoxSelections>
+      {tagsDatas.map((item, index) => (
+        <Tag
+          key={item.index}
+          text={capitalizeFirstLetter(item.name)}
+          bg={item.background}
+          color={item.color}
+          bghover={item.color}
+          colorhover={item.background}
+        />
+      ))}
+    </BoxSelections>
+  );
+};
 
 export default TodoSelections;

@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import variable from '../../styles/variable';
 
 const Section = styled.div`
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   h1 {
     color: ${variable.blue_1};
     font-weight: 300;
@@ -15,10 +15,10 @@ const Section = styled.div`
     }
   }
   i {
+    color: ${variable.organe};
     margin-right: 10px;
     position: relative;
     top: -5px;
-    color: ${variable.organe};
   }
 `;
 const Logo = () => (
