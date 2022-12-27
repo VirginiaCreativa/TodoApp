@@ -24,8 +24,6 @@ const TodoAdd = ({ onNewTodo }) => {
   //   return newTodo;
   // };
 
-  console.log(watch());
-
   return (
     <Form name="formulario">
       <InputAdd register={description} type="text" name="addTodo" />

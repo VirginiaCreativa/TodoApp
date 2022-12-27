@@ -1,34 +1,41 @@
 import variable from '../../styles/variable';
 
-const tagsColors = {
-  casa: {
+const tagsDatas = [
+  {
+    name: 'casa',
     background: variable.tag_bg_1,
     color: variable.tag_col_1,
   },
-  comprar: {
+  {
+    name: 'comp',
     background: variable.tag_bg_2,
     color: variable.tag_col_2,
   },
-  citar: {
+  {
+    name: 'citar',
     background: variable.tag_bg_3,
     color: variable.tag_col_3,
   },
-  pago: {
+  {
+    name: 'pago',
     background: variable.tag_bg_4,
     color: variable.tag_col_4,
   },
-  mercados: {
+  {
+    name: 'mercados',
     background: variable.tag_bg_5,
     color: variable.tag_col_5,
   },
-  educacion: {
+  {
+    name: 'educacion',
     background: variable.tag_bg_6,
     color: variable.tag_col_6,
   },
-  trabajo: {
+  {
+    name: 'trabajo',
     background: variable.tag_bg_7,
     color: variable.tag_col_7,
   },
-};
+];
 
-export default tagsColors;
+export default tagsDatas;

@@ -1,11 +1,9 @@
-/* eslint-disable react/no-array-index-key */
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import texts from '../../config/text.json';
+import capitalizeFirstLetter from '../../config/capitalizeFirstLetter';
 import Tag from '../atoms/Tag';
-import tagsColors from './tags_colors';
-
-const Selections = texts.selections;
+import tagsDatas from './tags_datas';
 
 const BoxSelections = styled.div`
   display: flex;
@@ -15,11 +13,19 @@ const BoxSelections = styled.div`
 `;
 
 const TodoSelections = () => {
-  console.log(tagsColors);
+  const [isTag, setIsTag] = useState([]);
+
+  console.log(tagsDatas);
+
   return (
     <BoxSelections>
-      {Object.keys(Selections).map((item, index) => (
-        <Tag key={index} text={Selections[item]} />
+      {tagsDatas.map((item, index) => (
+        <Tag
+          key={item.index}
+          text={capitalizeFirstLetter(item.name)}
+          bg={item.background}
+          color={item.color}
+        />
       ))}
     </BoxSelections>
   );
