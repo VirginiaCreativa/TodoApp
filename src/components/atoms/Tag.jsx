@@ -8,14 +8,14 @@ const BoxTag = styled.button`
   border-radius: 40px;
   color: ${({ color }) => color};
   font-size: 0.8rem;
-  padding: 4px 20px;
+  padding: 2px 16px;
   &:hover {
     background-color: ${({ bghover }) => bghover};
     color: ${({ colorhover }) => colorhover};
   }
   p {
     color: ${({ color }) => color};
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
     font-weight: 600;
     margin-bottom: 0;
   }

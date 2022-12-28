@@ -51,7 +51,6 @@ const ItemTodo = ({ text, tag }) => {
           .map((item) => (
             <Tag text={tag} bg={item.background} color={item.color} />
           ))}
-
         <Line />
         <Time />
       </div>
